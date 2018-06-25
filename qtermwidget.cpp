@@ -1,4 +1,4 @@
-/*  Copyright (C) 2008 e_k (e_k@users.sourceforge.net)
+﻿/*  Copyright (C) 2008 e_k (e_k@users.sourceforge.net)
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -33,8 +33,8 @@
 #include "SearchBar.h"
 #include "qtermwidget.h"
 
-
 #define STEP_ZOOM 1
+
 
 using namespace Konsole;
 
@@ -236,7 +236,7 @@ void QTermWidget::init(int startnow)
         dirs.append(QString::fromLatin1("/usr/local/share"));
         dirs.append(QString::fromLatin1("/usr/share"));
     }
-    dirs.append(QFile::decodeName(/*TRANSLATIONS_DIR*/"./translations"));
+    dirs.append(QFile::decodeName(TRANSLATIONS_DIR));
 
     m_translator = new QTranslator(this);
 
@@ -442,7 +442,8 @@ void QTermWidget::setColorScheme(const QString& origName)
 QStringList QTermWidget::availableColorSchemes()
 {
     QStringList ret;
-    foreach (const ColorScheme* cs, ColorSchemeManager::instance()->allColorSchemes())
+    const auto allColorSchemes = ColorSchemeManager::instance()->allColorSchemes();
+    for (const ColorScheme* cs : allColorSchemes)
         ret.append(cs->name());
     return ret;
 }

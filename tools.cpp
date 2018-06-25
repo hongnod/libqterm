@@ -1,8 +1,9 @@
-#include "tools.h"
+﻿#include "tools.h"
 
 #include <QCoreApplication>
 #include <QDir>
 #include <QtDebug>
+#include "qtermwidget_export.h"
 
 
 /*! Helper function to get possible location of layout files.
@@ -17,8 +18,7 @@ QString get_kb_layout_dir()
 //    qDebug() << __FILE__ << __FUNCTION__;
 
     QString rval = "";
-    //QString k(KB_LAYOUT_DIR);
-    QString k("./kb-layouts");
+    QString k(KB_LAYOUT_DIR);
     QDir d(k);
 
     qDebug() << "default KB_LAYOUT_DIR: " << k;
@@ -67,8 +67,7 @@ const QStringList get_color_schemes_dirs()
 //    qDebug() << __FILE__ << __FUNCTION__;
 
     QStringList rval;
-    //QString k(COLORSCHEMES_DIR);
-    QString k("./color-schemes");
+    QString k(COLORSCHEMES_DIR);
     QDir d(k);
 
 //    qDebug() << "default COLORSCHEMES_DIR: " << k;

@@ -31,7 +31,6 @@ struct TermWidgetImpl;
 class SearchBar;
 class QUrl;
 
-
 class QTERMWIDGET_EXPORT QTermWidget : public QWidget {
     Q_OBJECT
 public:
