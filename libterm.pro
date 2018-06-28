@@ -58,8 +58,6 @@ HEADERS += \
     HistorySearch.h \
     KeyboardTranslator.h \
     konsole_wcwidth.h \
-    kpty.h \
-    kpty_p.h \
     LineFont.h \
     protocol.h \
     qtermwidget.h \
