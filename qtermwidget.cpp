@@ -44,7 +44,7 @@ void *createTermWidget(int startnow, void *parent)
 }
 
 struct TermWidgetImpl {
-    TermWidgetImpl(QWidget* parent = 0);
+    TermWidgetImpl(QWidget* parent = nullptr);
 
     TerminalDisplay *m_terminalDisplay;
     Session *m_session;
@@ -401,7 +401,7 @@ void QTermWidget::setTextCodec(QTextCodec *codec)
 
 void QTermWidget::setColorScheme(const QString& origName)
 {
-    const ColorScheme *cs = 0;
+    const ColorScheme *cs = nullptr;
 
     const bool isFile = QFile::exists(origName);
     const QString& name = isFile ?

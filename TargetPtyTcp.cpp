@@ -85,7 +85,7 @@ char TargetPtyTcp::erase() const {
 bool TargetPtyTcp::isRunning() const {
 	return connected;
 }
-void TargetPtyTcp::setUtf8Mode(bool on) {}
+void TargetPtyTcp::setUtf8Mode(bool on) { }
 
 void TargetPtyTcp::sendData(const char* buffer, int length) {
 	if (length <= 0) return;
